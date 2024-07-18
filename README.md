@@ -1,5 +1,9 @@
 ## Hi there 👋
 
+I am a Software Developer who loves to play with tech and create usefull apps for others.
+
+To find out more about me go to my repos [**-->**](https://github.com/fikretellek?tab=repositories)
+
 <!--
 **fikretellek/fikretellek** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
