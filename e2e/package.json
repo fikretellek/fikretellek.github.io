@@ -1,0 +1,16 @@
+{
+	"name": "e2e",
+	"private": true,
+	"description": "Playwright end-to-end tests",
+	"license": "UNLICENSED",
+	"author": "Jonathan Sharpe <mail@jonrshar.pe>",
+	"type": "module",
+	"scripts": {
+		"e2e": "playwright test"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.48.2",
+		"eslint-plugin-playwright": "^2.0.1",
+		"playwright": "^1.40.1"
+	}
+}
