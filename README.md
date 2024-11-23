@@ -1,1 +1,0 @@
-fikret ellek portfolio
