@@ -1,8 +1,8 @@
 #home-hero {
   flex: 1 1 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, auto);
   gap: 5px;
 
   .card-hero {
