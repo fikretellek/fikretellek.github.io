@@ -1,0 +1,33 @@
+footer {
+  // padding-top: 10px;
+  border-bottom: 10px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding: 0px 60px;
+  // margin-top: 20px;
+
+  p {
+    align-self: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration-line: none;
+        color: black;
+
+        img {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
