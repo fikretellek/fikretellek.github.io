@@ -6,10 +6,12 @@ import Products from "./pages/Products/Products";
 import Contact from "./pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
+import WaveBackground from "./components/WaveBackground/WaveBackground";
 
 function App() {
   return (
     <>
+      <WaveBackground />
       <BrowserRouter>
         <Header />
         <main>

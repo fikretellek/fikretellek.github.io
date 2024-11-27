@@ -1,0 +1,26 @@
+{
+  "about": {
+    "text": "I am a software developer with a background of architecture",
+    "button": "about"
+  },
+  "current": {
+    "text": "working on my professional development by solo and team projects in CYF Products",
+    "button": false
+  },
+  "why": {
+    "text": "following my passion for building things and continuous learning",
+    "button": false
+  },
+  "products": {
+    "text": "explore full-stack apps and some other projects I have worked on so far",
+    "button": "projects"
+  },
+  "collab": {
+    "text": "contact me if you have an amazing idea to work on or just to chat :)",
+    "button": "contact"
+  },
+  "cyf": {
+    "text": "I am part of CodeYourFuture, join us ",
+    "button": "learn more"
+  }
+}
