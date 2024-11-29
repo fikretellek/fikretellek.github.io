@@ -19,6 +19,8 @@ const WaveBackground = () => {
 
     let time = 0; // Tracks animation time
 
+    const colors = ["#bfa2d4", "#91bfd8", "#acd491", "#e49b9b"];
+
     // Initialize waves and their control points
     for (let i = 0; i < numWaves; i++) {
       const sectionHeight = (canvas.height - 2 * topBottomPadding) / numWaves;
@@ -39,7 +41,7 @@ const WaveBackground = () => {
 
       waves.push({
         controlPoints,
-        color: `hsl(${Math.random() * 360}, 70%, 70%)`, // Unique color for each wave
+        color: colors[i % colors.length], // Unique color for each wave
       });
     }
 
@@ -98,7 +100,14 @@ const WaveBackground = () => {
         ctx.lineTo(0, nextWave.controlPoints[0].y - whiteSpace);
         ctx.closePath();
 
-        ctx.fillStyle = currentWave.color;
+        const activeCard = document.getElementById("active-card");
+        const activeCardColor =
+          activeCard && getComputedStyle(activeCard).backgroundColor !== "rgba(0, 0, 0, 0)"
+            ? getComputedStyle(activeCard).backgroundColor
+            : null;
+
+        // Fallback to currentWave.color if no valid color is found
+        ctx.fillStyle = activeCardColor || currentWave.color;
         ctx.fill();
       }
     };

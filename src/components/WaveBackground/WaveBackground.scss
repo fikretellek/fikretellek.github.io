@@ -9,4 +9,9 @@ canvas {
   height: 100dvh;
   overflow: hidden;
   z-index: -1;
+  opacity: 0.5;
+}
+
+#active-card {
+  background-color: black;
 }

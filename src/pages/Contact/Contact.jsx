@@ -1,7 +1,17 @@
+import "./Contact.scss";
 const Contact = () => {
   return (
     <>
-      <p>contact</p>
+      <>
+        <div id="contact-hero">
+          <div id="active-card" className="sub-page-card">
+            abcd
+          </div>
+          <div id="image-area" className="sub-page-card">
+            abcd
+          </div>
+        </div>
+      </>
     </>
   );
 };

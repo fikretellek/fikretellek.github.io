@@ -1,9 +1,9 @@
-import "./About.scss";
+import "./Projects.scss";
 
-const About = () => {
+const Products = () => {
   return (
     <>
-      <div id="about-hero">
+      <div id="products-hero">
         <div id="active-card" className="sub-page-card">
           abcd
         </div>
@@ -15,4 +15,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Products;

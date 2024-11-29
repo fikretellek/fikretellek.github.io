@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router";
+
 import "./HomeCard.scss";
 import CardsInfo from "./CardInfo.json";
 
@@ -50,13 +52,22 @@ const HomeCard = ({ id }) => {
         </div>
         <div className="card-backside">
           <p className="card-text">{CardsInfo[id].text}</p>
+
           {CardsInfo[id].button ? (
-            <a
-              href={id === "cyf" ? "https://codeyourfuture.io/" : "/" + id}
+            <NavLink
               className="card-button"
+              to={
+                id === "cyf"
+                  ? "https://codeyourfuture.io/"
+                  : id === "products"
+                  ? "projects"
+                  : id === "collab"
+                  ? "contact"
+                  : "/" + id
+              }
             >
               <p>{CardsInfo[id].button}</p>
-            </a>
+            </NavLink>
           ) : null}
         </div>
       </div>
