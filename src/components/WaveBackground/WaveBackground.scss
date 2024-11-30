@@ -10,6 +10,7 @@ canvas {
   overflow: hidden;
   z-index: -1;
   opacity: 0.5;
+  transition: background-color 1s ease;
 }
 
 #active-card {

@@ -1,6 +1,9 @@
 .card-hero {
   perspective: 1000px;
   transform-style: preserve-3d;
+  visibility: hidden;
+  opacity: 0;
+  animation: become-visible 0.4s forwards 0.4s;
 
   .inner-card {
     position: relative;
@@ -90,6 +93,17 @@
   }
 }
 
+@keyframes become-visible {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 #about-hero .inner-card .card-backside {
   background-color: #bfa2d4;
 }
@@ -109,27 +123,27 @@
   background-color: #e49b9b;
 }
 
-#about-hero {
+#home-hero #about-hero {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-#current-hero {
+#home-hero #current-hero {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-#why-hero {
+#home-hero #why-hero {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-#products-hero {
+#home-hero #products-hero {
   grid-column: 1/2;
   grid-row: 3/4;
 }
-#collab-hero {
+#home-hero #collab-hero {
   grid-column: 2/3;
   grid-row: 3/4;
 }
-#cyf-hero {
+#home-hero #cyf-hero {
   grid-column: 1/2;
   grid-row: 4/5;
 }

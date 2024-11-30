@@ -6,6 +6,11 @@
   justify-content: center;
   gap: 5px;
 
+  #active-card-color {
+    background-color: #91bfd8;
+    display: none;
+  }
+
   .sub-page-card {
     flex: 1 1 0;
     border-radius: 15px;

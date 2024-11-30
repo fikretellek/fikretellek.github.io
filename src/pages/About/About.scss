@@ -1,138 +1,112 @@
-#about-hero {
-  width: calc(100% - 240px);
+#about-hero.active-page {
+  margin: 0px 30px;
   flex: 1 1 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 5px;
 
-  .sub-page-card {
-    flex: 1 1 0;
-    border-radius: 15px;
+  visibility: hidden;
+  opacity: 0;
+  animation: become-visible 0.4s forwards 0.4s;
+
+  #image-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #photo-card {
+      position: relative;
+      left: 200%;
+      visibility: hidden;
+      opacity: 0;
+
+      animation: slide-back 0.8s forwards 0s, become-visible 0.4s forwards 0.4s;
+
+      img {
+        width: 100%;
+        border: solid 1px hsla(275, 37%, 73%, 1);
+
+        background-color: white;
+        padding: 10px;
+        border-radius: 9999px;
+      }
+    }
   }
 
-  #active-card {
-    border-radius: 10px;
+  .sub-page-card {
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  #active-card-color {
     background-color: hsla(275, 37%, 73%, 1);
+    display: none;
+  }
+
+  #active-card.sub-page-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    #inner-card.active-inner {
+      flex: 1 1 0;
+      box-sizing: border-box;
+      padding: 10px;
+      border: solid 1px hsla(275, 37%, 73%, 1);
+
+      border-radius: 12px;
+      color: black;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      div {
+        h2 {
+          margin: 15px 10px;
+        }
+      }
+
+      #skill-set {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 10px;
+
+          li {
+            list-style: none;
+            img {
+              opacity: 0.9;
+              text-decoration-line: none;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
-// .card-hero {
-//     perspective: 1000px;
-//     transform-style: preserve-3d;
+@keyframes slide-back {
+  from {
+    left: 200%;
+  }
+  to {
+    left: 0px;
+  }
+}
 
-//     .inner-card {
-//       width: 100%;
-//       height: 100%;
-//       padding: 10px;
-//       box-sizing: border-box;
-//       background-color: black;
-//       color: white;
-//       border-radius: 15px;
-//       position: relative;
-//       transition: background-color 0s ease 1.75s, transform 6s ease;
-//       transform-origin: center;
-//       transform-style: preserve-3d;
-
-//       .card-title {
-//         position: absolute;
-//         bottom: 10px;
-//         right: 10px;
-
-//         opacity: 1;
-//         visibility: visible;
-//         transition: opacity 0s ease, visibility 0s ease;
-
-//         transform: rotateY(180deg);
-//       }
-
-//       .card-backside {
-//         transform: rotateY(0deg);
-//         width: 100%;
-//         height: 100%;
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-
-//         opacity: 0;
-//         visibility: hidden;
-//         transition: opacity 0s ease, visibility 0s ease;
-
-//         h3 {
-//           font-size: 1em;
-//         }
-
-//         .card-button {
-//           text-decoration: none;
-//           align-self: flex-end;
-//           background-color: white;
-//           color: black;
-//           border: none;
-//           border-radius: 20px;
-//           padding: 5px 20px;
-
-//           p {
-//             font-size: 1.1rem;
-//             font-weight: bold;
-//           }
-//         }
-
-//         .card-button:hover {
-//           background-color: black;
-//           color: white;
-//         }
-//       }
-//     }
-
-//     &.back .inner-card {
-//       animation: rotate 6s forwards;
-//       transform: rotateY(180deg); /* Start or continue from the back */
-
-//       .card-title {
-//         opacity: 0;
-//         visibility: hidden;
-//         transition-delay: 1.75s; /* Disappear at halfway */
-//       }
-
-//       .card-backside {
-//         opacity: 1;
-//         visibility: visible;
-//         transition-delay: 1.75s; /* Appear at halfway */
-//       }
-//     }
-
-//     &.front .inner-card {
-//       animation: rotate-back 6s forwards;
-//       transform: rotateY(0deg); /* Start or continue from the front */
-
-//       .card-title {
-//         opacity: 1;
-//         visibility: visible;
-//         transition-delay: 1.75s; /* Reappear at the correct timing */
-//       }
-
-//       .card-backside {
-//         opacity: 0;
-//         visibility: hidden;
-//         transition-delay: 1.75s; /* Disappear early */
-//       }
-//     }
-//   }
-
-//   @keyframes rotate {
-//     0% {
-//       transform: rotateY(0deg);
-//     }
-//     100% {
-//       transform: rotateY(180deg);
-//     }
-//   }
-
-//   @keyframes rotate-back {
-//     0% {
-//       transform: rotateY(180deg);
-//     }
-//     100% {
-//       transform: rotateY(0deg);
-//     }
-//   }
+@keyframes become-visible {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}

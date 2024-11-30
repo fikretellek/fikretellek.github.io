@@ -8,25 +8,25 @@ const NavBar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/">
+            <NavLink to="/" className="link-to-another-page">
               <p>home</p>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/about">
+            <NavLink to="/about" className="link-to-another-page">
               <p>about</p>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/projects">
+            <NavLink to="/projects" className="link-to-another-page">
               <p>projects</p>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/contact">
+            <NavLink to="/contact" className="link-to-another-page">
               <p>contact</p>
             </NavLink>
           </li>
