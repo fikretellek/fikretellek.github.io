@@ -1,10 +1,15 @@
 #products-hero {
-  width: calc(100% - 240px);
+  width: 100%;
+  // margin: 0px 30px;
   flex: 1 1 0;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: center;
-  gap: 5px;
+  gap: 15px;
+
+  visibility: hidden;
+  opacity: 0;
+  animation: become-visible 0.4s forwards 0.4s;
 
   #active-card-color {
     background-color: #91bfd8;
@@ -12,12 +17,48 @@
   }
 
   .sub-page-card {
-    flex: 1 1 0;
     border-radius: 15px;
+    width: 45%;
+    max-width: 900px;
   }
 
-  #active-card {
-    border-radius: 10px;
-    background-color: #91bfd8;
+  #active-card.sub-page-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    #inner-card.active-inner {
+      flex: 1 1 0;
+      box-sizing: border-box;
+      padding: 10px;
+      border: solid 1px #91bfd8;
+
+      border-radius: 12px;
+      color: black;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  #image-area.sub-page-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    #inner-card.active-inner {
+      flex: 1 1 0;
+      box-sizing: border-box;
+      padding: 10px;
+      border: solid 1px #91bfd8;
+
+      border-radius: 12px;
+      color: black;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
   }
 }
