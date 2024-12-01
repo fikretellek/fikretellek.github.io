@@ -144,7 +144,10 @@ const About = () => {
         </div>
         <div id="image-area" className="sub-page-card">
           <div id="photo-card">
-            <img src="https://avatars.githubusercontent.com/fikretellek" alt="fikret ellek photo" />
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4E03AQECXUXvwU432Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711816469455?e=1738800000&v=beta&t=CpA8pFZ5PdvE5zY_HGMaSJhUyKEZALXIapON0i6IAGs"
+              alt="fikret ellek photo"
+            />
           </div>
         </div>
       </div>
