@@ -18,8 +18,7 @@
 
   .sub-page-card {
     border-radius: 15px;
-    width: 45%;
-    max-width: 900px;
+    width: 500px;
   }
 
   #active-card.sub-page-card {
@@ -39,6 +38,29 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+    }
+  }
+
+  #image-area.sub-page-card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    #inner-card.active-inner {
+      flex: 1 1 0;
+      box-sizing: border-box;
+      padding: 10px;
+      border: solid 1px #acd491;
+
+      border-radius: 12px;
+      color: black;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      p {
+        width: 100%;
+      }
     }
   }
 }

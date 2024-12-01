@@ -18,8 +18,7 @@
 
   .sub-page-card {
     border-radius: 15px;
-    width: 45%;
-    max-width: 900px;
+    width: 500px;
   }
 
   #active-card.sub-page-card {
@@ -50,8 +49,9 @@
     #inner-card.active-inner {
       flex: 1 1 0;
       box-sizing: border-box;
-      padding: 10px;
+
       border: solid 1px #91bfd8;
+      overflow: hidden;
 
       border-radius: 12px;
       color: black;
@@ -59,6 +59,159 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+
+      #image-carousel {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        ul {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 1px;
+
+          li {
+            list-style: none;
+            * {
+              pointer-events: none;
+            }
+          }
+
+          .image-area-project {
+            height: 50px; // Default height
+            width: 100%;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+              width: max-content;
+              position: absolute;
+              top: 0;
+              left: 0; // Always starts on the right side
+              padding: 0px 10px;
+              color: white;
+              animation: slide-right 0.4s forwards;
+            }
+
+            .p-image {
+              padding: 60px;
+              width: calc(100% - 100px);
+
+              object-fit: cover;
+              visibility: hidden;
+              opacity: 0;
+              &.active {
+                display: block;
+              }
+            }
+
+            #a1 {
+              // width: ;
+            }
+
+            // Animation for active state
+            &.active {
+              animation: adjust-height 0.4s forwards;
+
+              h3 {
+                animation: slide-left 0.4s forwards;
+              }
+
+              img {
+                animation: become-visible 0.4s forwards 0.3s;
+              }
+            }
+
+            // Animation for inactive state
+            &:not(.active) {
+              animation: adjust-height-back 0.4s forwards;
+            }
+          }
+        }
+      }
     }
   }
+}
+
+@keyframes adjust-height {
+  from {
+    flex-grow: 0;
+    height: 50px;
+  }
+  to {
+    flex-grow: 1;
+    height: auto;
+  }
+}
+
+@keyframes adjust-height-back {
+  from {
+    flex-grow: 1;
+    height: auto;
+  }
+  to {
+    flex-grow: 0;
+    height: 50px;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
+    font-size: 2rem;
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    left: 100%;
+    transform: translateX(-100%);
+    font-size: 2rem;
+  }
+
+  100% {
+    left: 0;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes become-visible {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#project-app.image-area-project {
+  background-color: black;
+}
+
+#project-aut.image-area-project {
+  background-color: blue;
+}
+
+#project-read {
+  background-color: red;
+}
+
+#project-mess {
+  background-color: green;
+}
+
+#project-map {
+  background-color: purple;
 }

@@ -1,0 +1,42 @@
+{
+  "project-app": {
+    "title": "Appointment",
+    "summary": "lorem",
+    "keyPointsTitle": "How did we achieve?",
+    "keyPoints": ["Appointment", "Appointment", "Appointment", "Appointment", "Appointment"],
+    "githubLink": "lorem",
+    "websiteLink": "How did we achieve?"
+  },
+  "project-aut": {
+    "title": "Authentication app",
+    "summary": "lorem",
+    "keyPointsTitle": "How did we achieve?",
+    "keyPoints": ["aut", "aut", "aut", "aut", "aut"],
+    "githubLink": "lorem",
+    "websiteLink": "How did we achieve?"
+  },
+  "project-read": {
+    "title": "Read-me Hire-me",
+    "summary": "lorem",
+    "keyPointsTitle": "How did we achieve?",
+    "keyPoints": ["Appointment", "Appointment", "Appointment", "Appointment", "Appointment"],
+    "githubLink": "lorem",
+    "websiteLink": "How did we achieve?"
+  },
+  "project-mess": {
+    "title": "message",
+    "summary": "lorem",
+    "keyPointsTitle": "How did we achieve?",
+    "keyPoints": ["Appointment", "Appointment", "Appointment", "Appointment", "Appointment"],
+    "githubLink": "lorem",
+    "websiteLink": "How did we achieve?"
+  },
+  "project-map": {
+    "title": "map",
+    "summary": "lorem",
+    "keyPointsTitle": "How did we achieve?",
+    "keyPoints": ["Appointment", "Appointment", "Appointment", "Appointment", "Appointment"],
+    "githubLink": "lorem",
+    "websiteLink": "How did we achieve?"
+  }
+}
