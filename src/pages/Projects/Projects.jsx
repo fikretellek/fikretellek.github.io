@@ -23,7 +23,7 @@ const Products = () => {
         <div id="active-card" className="sub-page-card">
           <div id="inner-card" className="active-inner">
             <div id="project-app-info" className="project-info">
-              <ProjectInfo id={activeId} />
+              <ProjectInfo id={activeId} classList="active-project-info" />
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Products = () => {
                   onClick={(e) => handleActiveProject(e)}
                   className="image-area-project"
                 >
-                  <h3>authentication</h3>
+                  <h3>authenticator</h3>
                   <img src="" alt="" />
                   <img src="" alt="" />
                 </li>
@@ -73,7 +73,7 @@ const Products = () => {
                   onClick={(e) => handleActiveProject(e)}
                   className="image-area-project"
                 >
-                  <h3>message frame</h3>
+                  <h3>messages</h3>
                   <img src="" alt="" />
                   <img src="" alt="" />
                 </li>

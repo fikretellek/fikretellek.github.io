@@ -1,0 +1,40 @@
+.project-links-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 60px;
+  position: relative;
+  a {
+    height: 100%;
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    &:first-child {
+      transform-origin: center;
+      right: calc(50% + 10px);
+    }
+    &:nth-child(2) {
+      transform-origin: center;
+      left: calc(50% + 10px);
+    }
+    img {
+      height: 80%;
+      transition: transform 0.2s ease;
+    }
+    &:hover img {
+      transform: scale(120%);
+    }
+  }
+}
+
+.project-info-summary {
+  //   //   text-overflow: ellipsis;
+  //   overflow: hidden;
+  //   //   white-space: nowrap;
+}

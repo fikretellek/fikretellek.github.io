@@ -29,7 +29,6 @@
     #inner-card.active-inner {
       flex: 1 1 0;
       box-sizing: border-box;
-      padding: 10px;
       border: solid 1px #91bfd8;
 
       border-radius: 12px;
@@ -38,6 +37,23 @@
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+
+      #project-app-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        #project-info-container {
+          flex: 1;
+          padding: 10px 30px 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &.active-project-info {
+            animation: become-visible 0.4s forwards 0.3s;
+          }
+        }
+      }
     }
   }
 
