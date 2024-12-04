@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Projects.scss";
 import ProjectInfo from "../../components/ProjectInfo/ProjectInfo";
+import meetingImg from "../../assets/meeting-1.png";
 
 const Products = () => {
   const [activeId, setActiveId] = useState("project-app");
@@ -38,7 +39,7 @@ const Products = () => {
                 >
                   <h3>appointment</h3>
                   <img
-                    src="src/assets/meeting-1.png"
+                    src={meetingImg}
                     id="a1"
                     className="p-image active"
                     alt="create meeting form on appointment project"
