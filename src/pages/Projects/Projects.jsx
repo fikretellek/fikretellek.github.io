@@ -42,7 +42,7 @@ const Products = () => {
                     src={meetingImg}
                     id="a1"
                     className="p-image active"
-                    alt="create meeting form on appointment project"
+                    alt="new meeting form on appointment project"
                   />
                   {/* <img
                     src="src/assets/meeting-2.png"
