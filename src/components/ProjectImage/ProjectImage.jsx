@@ -4,6 +4,9 @@ import "./ProjectImage.scss";
 import app1 from "../../assets/app-1.png";
 import app2 from "../../assets/app-2.png";
 import app3 from "../../assets/app-3.png";
+import aut1 from "../../assets/aut-1.png";
+import aut2 from "../../assets/aut-2.png";
+import aut3 from "../../assets/aut-3.png";
 
 const ProjectImage = ({ activeId, handleActiveProject }) => {
   const [activeImage, setActiveImage] = useState(0);
@@ -13,7 +16,7 @@ const ProjectImage = ({ activeId, handleActiveProject }) => {
   const apps = ["app", "aut", "read", "mess", "map"];
   const images = {
     app: [app1, app2, app3],
-    aut: [app1, app2, app3],
+    aut: [aut1, aut2, aut3],
     read: [app1, app2, app3],
     mess: [app1, app2, app3],
     map: [app1, app2, app3],

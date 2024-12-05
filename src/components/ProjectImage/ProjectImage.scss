@@ -121,10 +121,12 @@
       display: none;
       position: absolute;
       top: 50%;
+      z-index: 3;
 
       background-color: white;
       color: black;
-      border: none;
+      border: 2px solid white;
+
       animation: become-visible 0.3s ease-in forwards;
       opacity: 0;
       visibility: hidden;
@@ -133,18 +135,24 @@
         font-weight: bolder;
         font-size: 2rem;
       }
+      &:hover {
+        background-color: black;
+        color: white;
+      }
     }
     #next-button {
       border-top-left-radius: 99px;
       border-bottom-left-radius: 99px;
       right: 0px;
       padding: 3px 5px 3px 12px;
+      border-right: none;
     }
     #previous-button {
       border-top-right-radius: 99px;
       border-bottom-right-radius: 99px;
       left: 0px;
       padding: 3px 12px 3px 10px;
+      border-left: none;
     }
   }
 }
