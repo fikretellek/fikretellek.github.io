@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
       <div id="home-hero">
-        {["about", "current", "why", "products", "collab", "cyf"].map((id) => (
+        {["about", "current", "passion", "products", "collab", "cyf"].map((id) => (
           <HomeCard key={id} id={id} />
         ))}
       </div>
