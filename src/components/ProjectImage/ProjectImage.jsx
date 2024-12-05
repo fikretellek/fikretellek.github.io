@@ -1,41 +1,94 @@
+import React, { useEffect, useState } from "react";
 import "./ProjectImage.scss";
-import meetingImg from "../../assets/meeting-1.png";
-import { useEffect, useState } from "react";
+
+import app1 from "../../assets/app-1.png";
+import app2 from "../../assets/app-2.png";
+import app3 from "../../assets/app-3.png";
 
 const ProjectImage = ({ activeId, handleActiveProject }) => {
-  const [renderImage, setRenderImage] = useState(true);
+  const [activeImage, setActiveImage] = useState(0);
+  const [imageKey, setImageKey] = useState(Date.now());
+  const [shouldRenderImage, setShouldRenderImage] = useState(true);
+
   const apps = ["app", "aut", "read", "mess", "map"];
+  const images = {
+    app: [app1, app2, app3],
+    aut: [app1, app2, app3],
+    read: [app1, app2, app3],
+    mess: [app1, app2, app3],
+    map: [app1, app2, app3],
+  };
 
   useEffect(() => {
-    setRenderImage(false);
-    setTimeout(() => {
-      setRenderImage(true);
+    setShouldRenderImage(false);
+
+    const timer = setTimeout(() => {
+      setActiveImage(0);
+      setImageKey(Date.now());
+      setShouldRenderImage(true);
     }, 400);
-  }, [handleActiveProject]);
+
+    return () => clearTimeout(timer);
+  }, [activeId]);
+
+  function handleActiveImage(app, direction) {
+    setActiveImage((prevImage) => {
+      const appImages = images[app];
+      const newImage =
+        direction === "next"
+          ? (prevImage + 1) % appImages.length
+          : prevImage === 0
+          ? appImages.length - 1
+          : prevImage - 1;
+
+      setImageKey(Date.now());
+      return newImage;
+    });
+  }
 
   return (
     <ul id="projects-image-list">
-      {apps.map((app, i) => {
-        return (
-          <li
-            key={i}
-            id={"project-" + app}
-            onClick={(e) => handleActiveProject(e)}
-            className={"image-area-project" + (activeId === "project-" + app ? " active" : "")}
-          >
-            <h3 className={activeId === "project-" + app ? " active" : ""}>{app}</h3>
+      {apps.map((app, i) => (
+        <li
+          key={i}
+          id={`project-${app}`}
+          onClick={(e) => handleActiveProject(e)}
+          className={`image-area-project${activeId === `project-${app}` ? " active" : ""}`}
+        >
+          <h3 className={activeId === `project-${app}` ? "active" : ""}>{app}</h3>
 
-            {renderImage && (
+          {shouldRenderImage && (
+            <>
+              {activeImage > 0 && (
+                <button
+                  onClick={() => handleActiveImage(app, "previous")}
+                  id="previous-button"
+                  className="navigate-button"
+                >
+                  <p>{"<"}</p>
+                </button>
+              )}
               <img
-                src={meetingImg}
-                id={"image-" + app}
-                className={"p-image" + (activeId === "project-" + app ? " active" : "")}
-                alt="new meeting form on appointment project"
+                key={`${app}-${imageKey}`}
+                src={images[app][activeImage]}
+                id={`image-${app}`}
+                className={`p-image${activeId === `project-${app}` ? " active" : ""}`}
+                alt={`${app} project screenshot`}
               />
-            )}
-          </li>
-        );
-      })}
+
+              {activeImage < images[app].length - 1 && (
+                <button
+                  onClick={() => handleActiveImage(app, "next")}
+                  id="next-button"
+                  className="navigate-button"
+                >
+                  <p>{">"}</p>
+                </button>
+              )}
+            </>
+          )}
+        </li>
+      ))}
     </ul>
   );
 };
