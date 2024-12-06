@@ -7,6 +7,12 @@ import app3 from "../../assets/app-3.png";
 import aut1 from "../../assets/aut-1.png";
 import aut2 from "../../assets/aut-2.png";
 import aut3 from "../../assets/aut-3.png";
+import read1 from "../../assets/read-1.png";
+import read2 from "../../assets/read-2.png";
+import read3 from "../../assets/read-3.png";
+import mess1 from "../../assets/mess-1.png";
+import mess2 from "../../assets/mess-2.png";
+import mess3 from "../../assets/mess-3.png";
 
 const ProjectImage = ({ activeId, handleActiveProject }) => {
   const [activeImage, setActiveImage] = useState(0);
@@ -17,8 +23,8 @@ const ProjectImage = ({ activeId, handleActiveProject }) => {
   const images = {
     app: [app1, app2, app3],
     aut: [aut1, aut2, aut3],
-    read: [app1, app2, app3],
-    mess: [app1, app2, app3],
+    read: [read1, read2, read3],
+    mess: [mess1, mess2, mess3],
     map: [app1, app2, app3],
   };
 
