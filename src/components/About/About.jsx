@@ -25,13 +25,14 @@ const About = () => {
 
             <p>
               My career is driven by a commitment to{" "}
-              <span className="purple">continuous learning</span> and staying ahead in an
-              ever-evolving field. I specialise in <span className="purple">developing </span>,{" "}
-              <span className="purple">testing</span>, and <span className="purple">debugging</span>{" "}
+              <span className="bold">continuous learning</span> and staying ahead in an
+              ever-evolving field. I specialise in <span className="bold">developing </span>,{" "}
+              <span className="bold">testing</span>, and <span className="bold">debugging</span>{" "}
               high-performance web applications, combining technical expertise with creative{" "}
-              <span className="purple">problem-solving</span> to deliver{" "}
-              <span className="purple">robust, user-friendly solutions</span>. With a strong focus
-              on clean, efficient code and attention to detail, I strive to build applications that
+              <span className="bold">problem-solving</span> to deliver{" "}
+              <span className="bold">robust, user-friendly solutions</span>. With a strong focus on
+              clean, <span className="bold">efficient code</span> and{" "}
+              <span className="bold">attention to detail</span>, I strive to build applications that
               exceed expectations. My journey from a curious student to a proficient web developer
               highlights my dedication to growth, innovation, and excellence in software
               engineering.
