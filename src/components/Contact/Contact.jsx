@@ -9,8 +9,9 @@ const Contact = () => {
         <h1>Get in touch</h1>
         <p>
           Whether you have a project in mind, questions about my projects, or just want to chat
-          tech, I'm always eager to engage with fellow enthusiasts like you. Drop me a line and
-          let's start the conversation!
+          tech, I'm always eager to engage with fellow enthusiasts.
+          <br />
+          Drop me a line and let's start the conversation!
         </p>
         <a
           id="mail"
