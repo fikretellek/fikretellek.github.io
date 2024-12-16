@@ -1,0 +1,101 @@
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: var(--bg-color);
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: calc(var(--gap));
+    a {
+      padding: var(--padding);
+      border-radius: var(--border-radius);
+
+      &:hover {
+        background-color: var(--color-hover);
+      }
+    }
+  }
+
+  p {
+    font-weight: 600;
+    color: var(--color);
+    &.activeNav {
+      color: var(--color-2);
+    }
+  }
+
+  button {
+    background-color: var(--color-2);
+    border: 2px var(--color-accent) solid;
+    &:hover {
+      border: var(--border);
+    }
+  }
+}
+#logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: calc(100% - 1.2em);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  position: relative;
+  margin-left: calc(3 * var(--gap));
+
+  &:hover {
+    background-color: var(--color-hover);
+    p {
+      color: var(--color-2);
+    }
+  }
+}
+#logo {
+  height: calc(100% + 1em - 16px);
+  position: absolute;
+  top: 0px;
+  left: calc(-3 * var(--gap));
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+
+  grid-template-areas:
+    "a b"
+    "c ."
+    "d e"
+    "f .";
+  gap: 1px;
+
+  div {
+    background-color: var(--bg-color-accent);
+    aspect-ratio: 1;
+    border-radius: 1px;
+  }
+
+  :nth-child(1) {
+    grid-area: a;
+  }
+  :nth-child(2) {
+    grid-area: b;
+  }
+  :nth-child(3) {
+    grid-area: c;
+  }
+  :nth-child(4) {
+    grid-area: d;
+  }
+  :nth-child(5) {
+    grid-area: e;
+  }
+  :nth-child(6) {
+    grid-area: f;
+  }
+}

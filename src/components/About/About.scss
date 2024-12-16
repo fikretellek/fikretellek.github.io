@@ -1,0 +1,30 @@
+#about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: calc(5 * var(--gap));
+
+  #about-hero {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    #about-img {
+      width: 400px;
+      height: 400px;
+      background-color: black;
+      border-radius: calc(2 * var(--border-radius));
+    }
+    #about-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--gap);
+      text-align: left;
+      max-width: 50%;
+      .purple {
+        color: var(--color-2);
+      }
+    }
+  }
+}

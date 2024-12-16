@@ -1,0 +1,19 @@
+#root {
+  flex: 1;
+  margin: 0px 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main {
+  width: 1200px;
+  height: 1200px;
+  margin-top: 100px;
+}
+
+section {
+  position: relative;
+  margin-bottom: 120px;
+}

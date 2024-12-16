@@ -1,0 +1,27 @@
+footer {
+  padding-bottom: calc(2 * var(--gap));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  #footer-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: calc(2 * var(--gap));
+    padding-bottom: var(--gap);
+
+    a {
+      height: 30px;
+      .footer-logo {
+        filter: var(--color-logo);
+        height: 100%;
+      }
+    }
+  }
+
+  p {
+    width: fit-content;
+    border-top: 2px solid var(--color);
+    padding-top: var(--gap);
+  }
+}

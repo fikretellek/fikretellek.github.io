@@ -1,0 +1,41 @@
+#settings-bar {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  #mode-text-container {
+    font-size: 0.8rem;
+    rotate: 270deg;
+    transform: translateX(10px);
+    #mode-line {
+      width: 50px;
+      height: var(--stick);
+      background-color: var(--bg-color-accent);
+    }
+    :nth-child(3) {
+      rotate: 180deg;
+    }
+  }
+}
+
+#settings-button {
+  border-radius: 999px;
+  background-color: var(--bg-color-dark);
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media (prefers-color-scheme: Dark) {
+}

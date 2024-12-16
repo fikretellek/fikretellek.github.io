@@ -1,0 +1,25 @@
+#contact-container {
+  #contact-hero {
+    margin-bottom: 100px;
+    background-color: var(--color-hover);
+    padding: calc(5 * var(--gap));
+    border-radius: calc(2 * var(--border-radius));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+    h1 {
+      color: var(--color-2);
+    }
+    p {
+      width: 50%;
+    }
+    a {
+      margin-top: var(--gap);
+      width: fit-content;
+      padding: var(--padding);
+      border-radius: var(--border-radius);
+      border: var(--border);
+    }
+  }
+}
