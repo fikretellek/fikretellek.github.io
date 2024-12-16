@@ -7,8 +7,8 @@ const Hero = () => {
       <section id="hero">
         <h3>Hello, my name is</h3>
         <h1>Fikret Ellek</h1>
-        <h2>I enjoy crafting code and</h2>
-        <h2>building dreams</h2>
+        <h2 className="purple">I enjoy crafting code and</h2>
+        <h2 className="purple">building dreams</h2>
         <h3>Check out my projects</h3>
       </section>
     </>
