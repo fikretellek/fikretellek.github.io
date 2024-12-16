@@ -14,7 +14,6 @@ const Header = (props) => {
             <div></div>
             <div></div>
           </div>
-          <p className={props.activeLink === "#home" ? "activeNav" : ""}>Portfolio</p>
         </a>
 
         <nav>
