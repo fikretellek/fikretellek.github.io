@@ -168,7 +168,7 @@
             content: "no live website yet";
             position: absolute;
             width: 200px;
-            height: 30px;
+            height: 50px;
             border-radius: var(--border-radius);
             background-color: var(--color-hover);
             color: var(--color);
@@ -176,6 +176,10 @@
             top: 100%;
             left: 10px;
             pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
         }
         &.not-published {

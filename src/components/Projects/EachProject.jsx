@@ -1,13 +1,11 @@
-import appointment from "../../assets/appoint.png";
-import readme from "../../assets/read.png";
-import aut from "../../assets/aut.png";
-import mess from "../../assets/message.png";
-import map from "../../assets/map.png";
-import b1 from "../../assets/b1.jpg";
-import githubLogo from "../../assets/outline.png";
-import linkLogo from "../../assets/external-link.png";
 const EachProject = ({ id }) => {
-  const photos = [appointment, readme, aut, mess, map];
+  const photos = [
+    "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/appoint.png",
+    "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/read.png",
+    "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/aut.png",
+    "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/message.png",
+    "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/map.png",
+  ];
   const titles = [
     "This Appointment",
     "Read-me Hire-me",
@@ -36,12 +34,11 @@ const EachProject = ({ id }) => {
     "https://github.com/fikretellek/Module-Servers/tree/chat-server/chat-server",
   ];
   const websiteLinks = [false, false, false, "https://fe-chat-react-app.netlify.app/"];
-  const backgrounds = [b1];
   return (
     <>
       <div className={"project-container " + (id % 2 == 1 ? "reversed-flex-direction" : "")}>
         <div id={"project-" + id} className="top-margin-for-header"></div>
-        <div style={{ backgroundImage: backgrounds[id - 1] }} className="project-image-container">
+        <div className="project-image-container">
           <div className="background-img-elm" id={"b" + id}>
             .
           </div>
@@ -56,20 +53,36 @@ const EachProject = ({ id }) => {
           <div className="project-link-logo-container">
             {githubLinks[id - 1] && (
               <a href={githubLinks[id - 1]} target="_blank">
-                <img className="project-link-logo" src={githubLogo} alt="" />
+                <img
+                  className="project-link-logo"
+                  src="https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/outline.png"
+                  alt=""
+                />
               </a>
             )}
             {websiteLinks[id - 1] ? (
               <a href={websiteLinks[id - 1]}>
-                <img className="project-link-logo" src={linkLogo} alt="" />
+                <img
+                  className="project-link-logo"
+                  src="https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/external-link.png"
+                  alt=""
+                />
               </a>
             ) : websiteLinks[id - 1] === false ? (
               <a className="not-implemented">
-                <img className="project-link-logo" src={linkLogo} alt="" />
+                <img
+                  className="project-link-logo"
+                  src="https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/external-link.png"
+                  alt=""
+                />
               </a>
             ) : (
               <a className="not-published">
-                <img className="project-link-logo" src={linkLogo} alt="" />
+                <img
+                  className="project-link-logo"
+                  src="https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/external-link.png"
+                  alt=""
+                />
               </a>
             )}
           </div>
