@@ -11,10 +11,10 @@
     justify-content: space-between;
 
     #about-img {
-      width: 400px;
-      height: 400px;
+      aspect-ratio: 1;
+      height: 450px;
       background-color: black;
-      border-radius: calc(2 * var(--border-radius));
+      border-radius: calc(var(--border-radius));
       overflow: hidden;
       img {
         height: 100%;
