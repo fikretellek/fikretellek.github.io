@@ -1,7 +1,7 @@
 #projects-container {
   margin-bottom: 120px;
   #projects-hero {
-    height: calc(100dvh - 110px);
+    // height: calc(100dvh - 110px);
     margin-bottom: 90px;
     display: flex;
     flex-direction: column;
@@ -9,10 +9,17 @@
     gap: calc(5 * var(--gap));
 
     h1 {
-      align-self: flex-start;
+      align-self: center;
       a {
         color: inherit;
       }
+    }
+
+    #projects-titles {
+      display: flex;
+      flex-direction: row;
+      gap: var(--gap);
+      justify-content: center;
     }
 
     #projects-grid {
@@ -48,8 +55,49 @@
     width: calc(50% - var(--gap));
     height: 100%;
     aspect-ratio: 4/3;
-    background-color: black;
+    // background-color: var(--color-2);
     border-radius: calc(2 * var(--border-radius));
+    overflow: hidden;
+
+    position: relative;
+
+    .background-img-elm {
+      z-index: -1;
+      width: 110%;
+      height: 110%;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      background-image: url(https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/b1.jpg);
+      background-size: cover;
+      filter: blur(5px);
+      opacity: 0.5;
+
+      &#b1 {
+        background-image: url(https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/b1.jpg);
+      }
+      &#b2 {
+        background-image: url(https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/b2.jpg);
+      }
+      &#b3 {
+        background-image: url(https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/b3.jpg);
+      }
+      &#b4 {
+        background-image: url(https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/b4.jpg);
+      }
+      &#b5 {
+        background-image: url(https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/b5.jpg);
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: calc(100% - 5 * var(--gap));
+    }
   }
 
   &.reversed-flex-direction {
