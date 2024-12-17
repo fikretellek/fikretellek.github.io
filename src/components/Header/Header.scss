@@ -43,23 +43,14 @@ header {
     }
   }
 }
-#logo-link {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  height: calc(100% - 1.2em);
-  border-radius: var(--border-radius);
-  position: relative;
-  margin-left: calc(3 * var(--gap));
-}
+
 #logo {
   height: calc(100% + 1em - 16px);
-  position: absolute;
-  top: 0px;
-  left: calc(-3 * var(--gap));
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  padding: 0px 10px 10px 0px;
 
+  display: grid;
+  grid-template-rows: repeat(4, 10px);
+  grid-template-columns: repeat(2, 10px);
   grid-template-areas:
     "a b"
     "c ."

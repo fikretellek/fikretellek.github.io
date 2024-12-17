@@ -7,10 +7,14 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: calc(2 * var(--gap));
     padding-bottom: var(--gap);
 
     a {
+      padding: var(--padding-half);
+      &:hover {
+        background-color: var(--color-hover);
+        border-radius: var(--border-radius);
+      }
       height: 30px;
       .footer-logo {
         filter: var(--color-logo);
