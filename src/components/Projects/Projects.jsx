@@ -39,33 +39,51 @@ const Projects = (props) => {
               Projects
             </a>
           </h1>
-          <div id="projects-grid">
-            {/* onMouseLeave={resetActiveCard}*/}
+          <div id="projects-titles">
             <a
               href="#project-1"
               onPointerOver={() => handleActiveCard(1)}
               className="project-grid-elm"
-            ></a>
+            >
+              This-Appointment
+            </a>
+            |
             <a
               href="#project-2"
               onPointerOver={() => handleActiveCard(2)}
               className="project-grid-elm"
-            ></a>
+            >
+              Readme-Hireme
+            </a>
+            |
             <a
               href="#project-3"
               onPointerOver={() => handleActiveCard(3)}
               className="project-grid-elm"
-            ></a>
+            >
+              Authenticator
+            </a>
+            |
             <a
               href="#project-4"
               onPointerOver={() => handleActiveCard(4)}
               className="project-grid-elm"
-            ></a>
+            >
+              MessageMe
+            </a>
+            |
+            <a
+              href="#project-5"
+              onPointerOver={() => handleActiveCard(5)}
+              className="project-grid-elm"
+            >
+              Choropleth Maps
+            </a>
           </div>
         </div>
 
         <div id="projects-info">
-          {[1, 2, 3, 4].map((elm) => (
+          {[1, 2, 3, 4, 5].map((elm) => (
             <EachProject id={elm} />
           ))}
         </div>
