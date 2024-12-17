@@ -29,7 +29,13 @@ const Header = (props) => {
           <a href="#contact" onClick={() => props.handleLinkClick("#contact")}>
             <p className={props.activeLink === "#contact" ? "activeNav" : ""}>Contact</p>
           </a>
-          <button>RESUME</button>
+          <a
+            id="resume-button"
+            href="https://docs.google.com/document/d/1yE_RBHAIsi57DDHHeNuFuCHJ0AjDP_-KzKmcQS3mIHU/edit?usp=sharing"
+            target="_blank"
+          >
+            RESUME
+          </a>
         </nav>
       </header>
     </>

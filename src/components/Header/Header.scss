@@ -34,7 +34,8 @@ header {
     }
   }
 
-  button {
+  #resume-button {
+    color: var(--color-accent);
     background-color: var(--color-2);
     border: 2px var(--color-accent) solid;
     &:hover {
