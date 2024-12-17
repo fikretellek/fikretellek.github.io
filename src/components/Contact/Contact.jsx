@@ -13,11 +13,8 @@ const Contact = () => {
           <br />
           Drop me a line and let's start the conversation!
         </p>
-        <a
-          id="mail"
-          href="mailto:fikretellek@icloud.com?subject=Hello%20there!&body=I%20wanted%20to%20reach%20out"
-        >
-          Say Hello
+        <a id="mail" href="mailto:fikretellek@icloud.com?subject=Hello%20there!">
+          email
         </a>
       </div>
     </section>
