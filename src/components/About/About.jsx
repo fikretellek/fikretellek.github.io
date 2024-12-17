@@ -7,7 +7,12 @@ const About = () => {
         <div id="about" className="top-margin-for-header"></div>
         <h1>About</h1>
         <div id="about-hero">
-          <div id="about-img"></div>
+          <div id="about-img">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4E03AQECXUXvwU432Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711816469455?e=1740009600&v=beta&t=X4kRSh2cTkvpXuFQ9SF4G9YxghZq3FMiYgMYRG0brP0"
+              alt=""
+            />
+          </div>
           <div id="about-info">
             <p>Hi, my name is Fikret. I enjoy crafting code and building dreams.</p>
             <p>

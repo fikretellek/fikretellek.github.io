@@ -9,11 +9,17 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+
     #about-img {
       width: 400px;
       height: 400px;
       background-color: black;
       border-radius: calc(2 * var(--border-radius));
+      overflow: hidden;
+      img {
+        height: 100%;
+        filter: grayscale(1);
+      }
     }
     #about-info {
       display: flex;
