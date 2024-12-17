@@ -9,7 +9,9 @@ const Hero = () => {
         <h1>Fikret Ellek</h1>
         <h2 className="purple">I enjoy crafting code and</h2>
         <h2 className="purple">building dreams</h2>
-        <h3>Check out my projects</h3>
+        <h3>
+          <a href="#projects">Check out my projects</a>
+        </h3>
       </section>
     </>
   );
