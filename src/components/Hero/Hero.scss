@@ -23,3 +23,38 @@
   position: absolute;
   top: 0px;
 }
+
+@media screen and (max-width: 1080px) {
+  #hero h1 {
+    font-size: 6rem;
+  }
+  #hero h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #hero h1 {
+    font-size: 5rem;
+  }
+  #hero h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 615px) {
+  #hero h1 {
+    font-size: 4rem;
+  }
+  #hero h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #hero h1 {
+    font-size: 3rem;
+  }
+  #hero h2 {
+    font-size: 1.6rem;
+  }
+}

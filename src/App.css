@@ -9,11 +9,24 @@
 }
 main {
   width: 1200px;
-  height: 1200px;
+  max-width: calc(90% - 2 * var(--gap));
   margin-top: 100px;
 }
 
 section {
   position: relative;
   margin-bottom: 120px;
+}
+
+@media screen and (max-width: 1280px) {
+  main {
+    width: calc(90% - 2 * var(--gap));
+  }
+}
+
+@media screen and (max-width: 780px) {
+  main {
+    max-width: calc(100% - 2 * var(--gap));
+    width: calc(100% - 2 * var(--gap));
+  }
 }

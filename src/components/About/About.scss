@@ -34,3 +34,30 @@
     }
   }
 }
+
+@media screen and (max-width: 1080px) {
+  #about-container {
+    align-items: center;
+  }
+  #about-container #about-hero {
+    width: calc(90% - 2 * var(--gap));
+    flex-direction: column;
+    gap: calc(3 * var(--gap));
+
+    #about-img {
+      height: auto;
+      img {
+        width: 100%;
+      }
+    }
+    #about-info {
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #about-container #about-hero {
+    width: 100%;
+  }
+}

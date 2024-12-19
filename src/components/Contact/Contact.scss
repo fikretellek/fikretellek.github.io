@@ -23,3 +23,16 @@
     }
   }
 }
+
+@media screen and (max-width: 1080px) {
+  #contact-container {
+    margin: 0px auto;
+    width: calc(90% - 2 * var(--gap));
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #contact-container {
+    width: 100%;
+  }
+}

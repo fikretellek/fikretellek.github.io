@@ -13,6 +13,9 @@ function App() {
   const [activeLink, setActiveLink] = useState("#home");
 
   const handleLinkClick = (link) => {
+    if (document.getElementById("hamburger-menu").classList.contains("close")) {
+      document.getElementById("hamburger-menu").click();
+    }
     setActiveLink(link);
   };
   return (

@@ -37,5 +37,15 @@
   }
 }
 
-@media (prefers-color-scheme: Dark) {
+@media screen and (max-width: 780px) {
+  #settings-bar {
+    z-index: 999;
+    top: 20px;
+    right: 100px;
+    bottom: auto;
+    left: auto;
+    #mode-text-container {
+      display: none;
+    }
+  }
 }

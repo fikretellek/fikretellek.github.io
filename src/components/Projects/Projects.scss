@@ -265,3 +265,36 @@
   display: block;
   height: 90px; /* Height equal to the offset you want */
 }
+
+@media screen and (max-width: 1080px) {
+  #about-container #about-hero {
+    flex-direction: row;
+  }
+  #projects-container #projects-hero #projects-titles {
+    flex-direction: column;
+  }
+  .project-container {
+    .project-image-container {
+      width: calc(90% - 2 * var(--gap));
+    }
+    .project-info-container {
+      width: calc(90% - 2 * var(--gap));
+    }
+    flex-direction: column;
+    height: auto;
+    &.reversed-flex-direction {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .project-container {
+    .project-image-container {
+      width: 100%;
+    }
+    .project-info-container {
+      width: 100%;
+    }
+  }
+}

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: calc(5 * var(--gap));
 
   #skills-list {
@@ -37,5 +37,18 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #skills-container {
+    margin: 0px auto 120px;
+    width: calc(90% - 2 * var(--gap));
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #skills-container {
+    width: 100%;
   }
 }
