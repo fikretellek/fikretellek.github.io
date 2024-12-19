@@ -38,7 +38,14 @@ const EachProject = ({ id }) => {
     <>
       <div className={"project-container " + (id % 2 == 1 ? "reversed-flex-direction" : "")}>
         <div id={"project-" + id} className="top-margin-for-header"></div>
-        <div className="project-image-container">
+        <div
+          className="project-image-container"
+          onClick={() => {
+            if (websiteLinks[id - 1]) {
+              window.open(websiteLinks[id - 1], "_blank");
+            }
+          }}
+        >
           <div className="background-img-elm" id={"b" + id}>
             .
           </div>
