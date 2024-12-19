@@ -1,4 +1,27 @@
+import { useState } from "react";
+
 const EachProject = ({ id }) => {
+  const handleCLickImage = (e) => {
+    if (websiteLinks[id - 1] != 1 && websiteLinks[id - 1] != 0) {
+      window.open(websiteLinks[id - 1], "_blank");
+    } else {
+      if (e.target.classList.contains("gets-bigger")) {
+        e.target.classList.remove("gets-bigger");
+      } else {
+        e.target.classList.add("gets-bigger");
+
+        // Add event listener for clicks outside the element
+        const handleOutsideClick = (event) => {
+          if (!e.target.contains(event.target)) {
+            e.target.classList.remove("gets-bigger");
+            document.removeEventListener("click", handleOutsideClick);
+          }
+        };
+
+        document.addEventListener("click", handleOutsideClick);
+      }
+    }
+  };
   const photos = [
     "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/appoint.png",
     "https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/read.png",
@@ -33,23 +56,27 @@ const EachProject = ({ id }) => {
     "https://github.com/fikretellek/authenticator",
     "https://github.com/fikretellek/Module-Servers/tree/chat-server/chat-server",
   ];
-  const websiteLinks = [false, false, false, "https://fe-chat-react-app.netlify.app/"];
+  const websiteLinks = [1, 1, 1, "https://fe-chat-react-app.netlify.app/", 0];
   return (
     <>
       <div className={"project-container " + (id % 2 == 1 ? "reversed-flex-direction" : "")}>
         <div id={"project-" + id} className="top-margin-for-header"></div>
         <div
-          className="project-image-container"
-          onClick={() => {
-            if (websiteLinks[id - 1]) {
-              window.open(websiteLinks[id - 1], "_blank");
-            }
-          }}
+          className={
+            "project-image-container" +
+            (websiteLinks[id - 1] != 1 && websiteLinks[id - 1] != 0 ? " abc" : "")
+          }
+          onClick={(e) => handleCLickImage(e)}
         >
-          <div className="background-img-elm" id={"b" + id}>
-            .
+          <div
+            className={
+              "image-popup" + ""
+              // (websiteLinks[id - 1] === 1 || websiteLinks[id - 1] === 0 ? " gets-bigger" : "")
+            }
+          >
+            <div className="background-img-elm" id={"b" + id}></div>
+            {photos[id - 1] && <img src={photos[id - 1]} alt="" />}
           </div>
-          {photos[id - 1] && <img src={photos[id - 1]} alt="" />}
         </div>
         <div className="project-info-container">
           {titles[id - 1] && <h2 className="project-title">{titles[id - 1]}</h2>}
@@ -67,7 +94,7 @@ const EachProject = ({ id }) => {
                 />
               </a>
             )}
-            {websiteLinks[id - 1] ? (
+            {websiteLinks[id - 1] != 1 && websiteLinks[id - 1] != 0 ? (
               <a href={websiteLinks[id - 1]} target="_blank">
                 <img
                   className="project-link-logo"
@@ -75,7 +102,7 @@ const EachProject = ({ id }) => {
                   alt=""
                 />
               </a>
-            ) : websiteLinks[id - 1] === false ? (
+            ) : websiteLinks[id - 1] === 1 ? (
               <a className="not-implemented">
                 <img
                   className="project-link-logo"
