@@ -28,6 +28,9 @@
   #contact-container {
     margin: 0px auto;
     width: calc(90% - 2 * var(--gap));
+    #contact-hero p {
+      width: 100%;
+    }
   }
 }
 
