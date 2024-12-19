@@ -2,6 +2,15 @@ import { useState } from "react";
 import "./Header.scss";
 
 const Header = (props) => {
+  const handleToggleMenu = (e) => {
+    if (document.getElementsByTagName("nav")[0].classList.contains("hiden")) {
+      document.getElementsByTagName("nav")[0].classList.remove("hiden");
+      e.target.classList.add("close");
+    } else {
+      document.getElementsByTagName("nav")[0].classList.add("hiden");
+      e.target.classList.remove("close");
+    }
+  };
   return (
     <>
       <header>
@@ -15,8 +24,12 @@ const Header = (props) => {
             <div></div>
           </div>
         </a>
+        <button id="hamburger-menu" onClick={handleToggleMenu}>
+          <div className="menu-bar"></div>
+          <div className="menu-bar"></div>
+        </button>
 
-        <nav>
+        <nav className="hiden">
           <a href="#projects" onClick={() => props.handleLinkClick("#projects")}>
             <p className={props.activeLink === "#projects" ? "activeNav" : ""}>Projects</p>
           </a>

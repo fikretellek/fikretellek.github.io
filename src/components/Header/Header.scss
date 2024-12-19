@@ -84,3 +84,69 @@ header {
     grid-area: f;
   }
 }
+
+#hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    nav {
+      border-radius: var(--border-radius) 0px 0px var(--border-radius);
+      padding-left: 30%;
+      max-width: 500px;
+      position: absolute;
+      padding-top: calc(3 * var(--gap));
+      padding-bottom: calc(3 * var(--gap));
+      top: 100%;
+      right: 0%;
+      background-color: var(--color-hover);
+      width: calc(50% - 2 * var(--gap));
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+
+      &.hiden {
+        left: 100%;
+      }
+    }
+
+    #hamburger-menu {
+      border: none;
+      margin: 0px;
+      padding: 0px;
+      background-color: var(--bg-color);
+      width: 50px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: var(--gap);
+
+      .menu-bar {
+        transition: all 0.3s ease;
+        pointer-events: none;
+        width: 50px;
+        height: 5px;
+        background-color: var(--color);
+        &:nth-child(2) {
+          width: 40px;
+        }
+      }
+      &.close {
+        .menu-bar {
+          width: 50px;
+          height: 5px;
+          background-color: var(--color);
+          transform: rotate(45deg) translateY(10px);
+          &:nth-child(2) {
+            width: 50px;
+            transform: rotate(-45deg) translateY(-10px);
+          }
+        }
+      }
+    }
+  }
+}
