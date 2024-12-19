@@ -21,9 +21,9 @@ const EachProject = ({ id }) => {
     "As part of a medical research initiative at Manchester University, I contributed to the development of choropleth maps visualising the distribution of optometrists across the UK. Processed postcode data from CSV files, storing the results in a structured database. Utilised the Postcodes.io API to convert postcodes into detailed address objects, extracting geographical information at country, region, county, and local district levels. Aggregated data at these levels to calculate population distributions, creating visual representations of density variations across administrative regions. Ensured precision and currency of visualisations using National Statistics maps and QGIS for data encoding and mapping.",
   ];
   const keys = [
-    ["JS", "React", "Node.js", "Express.js", "Psql", "Docker", "CI/CD", "Google Routes API"],
-    ["JS", "React", "Node.js", "Express.js", "Psql", "Github Rest API"],
-    ["JS", "Node.js", "Express.js", "Psql", "JWT"],
+    ["JS", "React", "Node.js", "Express.js", "PostgreSQL", "Docker", "CI/CD", "Google Routes API"],
+    ["JS", "React", "Node.js", "Express.js", "PostgreSQL", "Github Rest API"],
+    ["JS", "Node.js", "Express.js", "PostgreSQL", "JWT"],
     ["JS", "React", "Node.js", "Express.js", "WebSocket"],
     ["JS", "Node.js", "Express.js", "Rest APIs", "PostgreSQL", "QGIS"],
   ];
