@@ -68,7 +68,7 @@ const EachProject = ({ id }) => {
               </a>
             )}
             {websiteLinks[id - 1] ? (
-              <a href={websiteLinks[id - 1]}>
+              <a href={websiteLinks[id - 1]} target="_blank">
                 <img
                   className="project-link-logo"
                   src="https://raw.githubusercontent.com/fikretellek/fikretellek.github.io/refs/heads/main/src/assets/external-link.png"
